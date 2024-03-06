@@ -5,6 +5,9 @@ class PythonPrograms:
     def __init__(self):
         pass
 
+    # Level 1
+    # ----------------------------------------------------------------#
+
     # To return hello world
     def hello_world():
         return 'hello world'
@@ -73,7 +76,7 @@ class PythonPrograms:
 
 
         """
-        IP = input("what operation you want to do? Press[Addition, Substaction ,Multiplication ,Division] ")
+        IP = input("what operation you want to do? Press[Addition, Substaction , Multiplication ,Division] ")
         if IP == "Addition":
             return f"Addition is {num1+num2}"
         if IP == "Substaction":
@@ -82,3 +85,45 @@ class PythonPrograms:
             return f"Multiplication is {num1*num2}"
         if IP == "Division":
             return f"Division is {num1/num2}"
+
+    # Level 2
+    # ----------------------------------------------------------------#
+    # Factorial of the number
+    def fact(number):
+        """
+        This is brute force code to find factorial of a number
+
+        Args:
+            number:int, number for which you have to find factorial
+
+        Returns:
+            fact::int, Factorial of given number
+        """
+        fact = 1
+        if number == 0:
+            return "Enter valid number"
+        for i in range(1, number+1):
+            fact = fact*i
+        return fact
+
+    # Prime number
+    def prime_or_not(num):
+        """
+        This function will give you idea about the Prime numbers
+
+        Args:
+            num (int) : The number which we want to see Prime or not
+
+        Returns:
+            string : Telling prime or not
+
+        """
+        if num == 1:
+            return "1 is neither prime nor composite."
+        else:
+            for i in range(2, int(num**0.5) + 1):
+                # Checking only upto square root numbers to reduce complexity
+                if num % i != 0 and num % num == 0 and num % 1 == 0:
+                    return "The given number is a PRIME number"
+                else:
+                    return "The given number is NOT A PRIME number"
