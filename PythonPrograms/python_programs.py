@@ -1,4 +1,4 @@
-# Coding spectrum is a type of class where u can do basic coding challenges by calling single class
+# Coding spectrum is a type of class where you can do basic coding challenges by calling single class
 # Author: Anushka Sonawane and Chinmay Bhalerao
 
 class PythonPrograms:
@@ -127,3 +127,42 @@ class PythonPrograms:
                     return "The given number is a PRIME number"
                 else:
                     return "The given number is NOT A PRIME number"
+
+    # Function to calculate fibonacci series
+    def fibonacci_series(num):
+        """
+        This function takes number and returns
+          fibonacci series upto that number
+
+        Args:
+            num (int): number upto which we want to calculate fibonacci series
+
+        Returns:
+            Series (list): fibonacci series
+
+        """
+
+        i = 0
+        a = 0
+        b = 1
+        series = []
+        while i < num+1:
+            series.append(a)
+            c = a+b
+            a = b
+            b = c
+            i += 1
+        return series
+
+    def get_reversed_string(word):
+        """
+        This function will reverse the string
+
+        Args:
+            word (str): The string to reverse
+
+        Returns:
+            reversed string (str): The string
+        """
+        for i in word[::-1]:
+            print(i)
