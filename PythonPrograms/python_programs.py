@@ -10,7 +10,7 @@ class PythonPrograms:
 
     # To return hello world
     def hello_world():
-        return 'hello world'
+        return "hello world"
 
     # To sum two numbers
     def sum(a, b):
